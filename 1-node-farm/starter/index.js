@@ -1,4 +1,5 @@
 const fs =  require('fs');
+const http = require('http');
 
 const hello = 'Hello world';
 console.log(hello);
@@ -10,7 +11,7 @@ const textOut = `Information about avocado: ${textInput}\nCreated on ${Date.now(
 
 fs.writeFileSync('./txt/output.txt', textOut);
 
-
+//Callback hell example
 //err, data parameter pattern is common on Node.js
 fs.readFile('./txt/start.txt', 'utf-8', (err, data1) => {
     fs.readFile(`./txt/${data1}.txt`, 'utf-8', (err, data2) => {
