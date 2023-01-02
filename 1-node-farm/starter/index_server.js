@@ -1,5 +1,6 @@
 const http = require("http");
 const fs = require("fs");
+const url = require("url");
 
 const tempOverview = fs.readFileSync(
   `${__dirname}/templates/template-overview.html`,
@@ -34,24 +35,28 @@ const replaceTemplate = (temp, product) => {
 };
 
 const server = http.createServer((req, res) => {
-  const pathName = req.url;
+  const { query, pathname } = url.parse(req.url, true);
 
-  switch (pathName) {
+  switch (pathname) {
     case "/":
     case "/overview":
       res.writeHead(200, { "Content-Type": "text/html" });
       const cardsHtml = dataObj
         .map((el) => replaceTemplate(tempCard, el))
         .join("");
-      const output = tempOverview.replace(/{%PRODUCT_CARDS%}/g, cardsHtml);
-      res.end(output);
+      const overviewOutput = tempOverview.replace(
+        /{%PRODUCT_CARDS%}/g,
+        cardsHtml
+      );
+      res.end(overviewOutput);
       break;
     case "/product":
       res.writeHead(200, { "Content-Type": "text/html" });
-      res.end(tempProduct);
+      const product = dataObj[query.id];
+      const productOutput = replaceTemplate(tempProduct, product);
+      res.end(productOutput);
       break;
     case "/api":
-      const productData = JSON.parse(data);
       res.writeHead(200, { "Content-Type": "application/json" });
       res.end(data);
       break;
