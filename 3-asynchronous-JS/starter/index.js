@@ -58,6 +58,15 @@ const getDocPic = async () => {
   } catch (error) {
     console.log(err);
   }
+  return '2: Ready';
 };
-
-getDocPic();
+(async () => {
+    try {
+        console.log('1: Will get dog pics');
+        const a = await getDocPic();// this code is offloaded, execution continues with the next line
+        console.log(a);
+        console.log('3: Done getting dog pics');
+    } catch (error) {
+        console.log('Error');
+    }
+})();
