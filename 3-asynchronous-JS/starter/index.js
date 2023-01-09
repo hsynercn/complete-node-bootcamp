@@ -50,10 +50,29 @@ const getDocPic = async () => {
     //this code will wait until read promise is resolved
     const data = await readFilePro(`${__dirname}/dog.txt`);
     console.log(`Breed: ${data}`);
-    const res = await superagent.get(
+
+    //if we want to get more than one picture
+
+    const res1Pro = superagent.get(
       `https://dog.ceo/api/breed/${data}/images/random`
     );
-    await writeFilePro('dog-img.txt', res.body.message);
+
+    const res2Pro = superagent.get(
+      `https://dog.ceo/api/breed/${data}/images/random`
+    );
+
+    const res3Pro = superagent.get(
+      `https://dog.ceo/api/breed/${data}/images/random`
+    );
+
+    const all = await Promise.all([res1Pro, res2Pro, res3Pro]);
+
+    const images = all.map(element => element.body.message)
+    console.log(all.length);
+    console.log(images);
+
+
+    await writeFilePro('dog-img.txt', images.join('\n'));
     console.log('Done');
   } catch (error) {
     console.log(err);
@@ -61,12 +80,12 @@ const getDocPic = async () => {
   return '2: Ready';
 };
 (async () => {
-    try {
-        console.log('1: Will get dog pics');
-        const a = await getDocPic();// this code is offloaded, execution continues with the next line
-        console.log(a);
-        console.log('3: Done getting dog pics');
-    } catch (error) {
-        console.log('Error');
-    }
+  try {
+    console.log('1: Will get dog pics');
+    const a = await getDocPic(); // this code is offloaded, execution continues with the next line
+    console.log(a);
+    console.log('3: Done getting dog pics');
+  } catch (error) {
+    console.log('Error');
+  }
 })();
