@@ -52,7 +52,6 @@ const getDocPic = async () => {
     console.log(`Breed: ${data}`);
 
     //if we want to get more than one picture
-
     const res1Pro = superagent.get(
       `https://dog.ceo/api/breed/${data}/images/random`
     );
@@ -70,7 +69,6 @@ const getDocPic = async () => {
     const images = all.map(element => element.body.message)
     console.log(all.length);
     console.log(images);
-
 
     await writeFilePro('dog-img.txt', images.join('\n'));
     console.log('Done');
