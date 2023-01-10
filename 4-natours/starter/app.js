@@ -83,6 +83,23 @@ app.patch('/api/v1/tours/:id', (req, res) => {
   });
 });
 
+app.delete('/api/v1/tours/:id', (req, res) => {
+  const id = req.params.id * 1; //a trick to convert string to number
+
+  if(!tours.find((tour) => tour.id === id)) {
+    return res.status(404).json({
+      status: 'error',
+      message: 'Tour not found',
+    });
+  }
+  //this is showcase implementation we are not changing anything on the file
+  //usually we will return 204 status code with null data
+  res.status(204).json({
+    status: 'success',
+    data: null,
+  });
+});
+
 const port = 3000;
 app.listen(port, () => {
   console.log(`App running on port ${port}...`);
