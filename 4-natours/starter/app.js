@@ -2,7 +2,15 @@ const express = require('express');
 const fs = require('fs');
 const app = express();
 
+//this is a middleware function
 app.use(express.json());
+
+//we can create our own middleware functions
+app.use((req, res, next) => {
+  console.log('Hello from the middleware');
+  //we need to call next function to move to the next middleware, otherwise the request will be stuck here
+  next();
+});
 
 const tours = JSON.parse(
   fs.readFileSync(`${__dirname}/dev-data/data/tours-simple.json`, 'utf-8')
@@ -99,14 +107,6 @@ const deleteTour = (req, res) => {
     data: null,
   });
 };
-
-/*
-app.get('/api/v1/tours', getAllTours);
-app.get('/api/v1/tours/:id', getTour);
-app.post('/api/v1/tours', createTour);
-app.patch('/api/v1/tours/:id', updateTour);
-app.delete('/api/v1/tours/:id', deleteTour);
-*/
 
 app.route('/api/v1/tours').get(getAllTours).post(createTour);
 
