@@ -1,6 +1,9 @@
-const express = require('express');
 const fs = require('fs');
+const express = require('express');
+const morgan = require('morgan');
 const app = express();
+
+app.use(morgan('dev'));
 
 //this is a middleware function
 app.use(express.json());
