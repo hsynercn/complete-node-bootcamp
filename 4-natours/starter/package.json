@@ -4,7 +4,8 @@
   "description": "Learning node, express and mongoDB",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "author": "Huseyin Can Ercan",
   "license": "ISC",
@@ -13,6 +14,7 @@
     "morgan": "^1.10.0"
   },
   "devDependencies": {
+    "markdown-notes-tree": "^1.12.0",
     "nodemon": "^2.0.20"
   }
 }
