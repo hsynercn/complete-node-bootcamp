@@ -3,6 +3,9 @@ const tourController = require('./../controllers/tourController');
 
 const router = express.Router();
 
+//if we don't send the id, the middleware will not be called
+router.param('id', tourController.checkID);
+
 router
   .route('/')
   .get(tourController.getAllTours)
