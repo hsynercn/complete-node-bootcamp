@@ -6,9 +6,8 @@ const tourRouter = require('./routes/tourRoutes');
 const userRouter = require('./routes/userRoutes');
 
 app.use(morgan('dev'));
-
-//this is a middleware function
 app.use(express.json());
+app.use(express.static(`${__dirname}/public`));
 
 //we can create our own middleware functions
 app.use((req, res, next) => {
