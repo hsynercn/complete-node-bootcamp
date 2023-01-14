@@ -17,6 +17,16 @@ exports.checkID = (req, res, next, val) => {
   next();
 };
 
+exports.checkBody = (req, res, next) => {
+    if (!req.body.name || !req.body.price) {
+        return res.status(400).json({
+            status: 'fail',
+            message: 'Missing name or price'
+        });
+    }
+    next();
+};
+
 exports.getAllTours = (req, res) => {
   console.log(req.requestTime);
   res.status(200).json({
@@ -31,6 +41,8 @@ exports.getAllTours = (req, res) => {
 
 exports.getTour = (req, res) => {
   console.log(req.params);
+  const id = req.params.id * 1; //a trick to convert string to number
+  const tour = tours.find((tour) => tour.id === id);
   res.status(200).json({
     status: 'success',
     requestedAt: req.requestTime,
@@ -48,7 +60,7 @@ exports.createTour = (req, res) => {
 
   tours.push(newTour);
   fs.writeFile(
-    `${__dirname}/dev-data/data/tours-simple.json`,
+    `${__dirname}/../dev-data/data/tours-simple.json`,
     JSON.stringify(tours),
     (err) => {
       res.status(201).json({
