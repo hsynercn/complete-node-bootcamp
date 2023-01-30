@@ -93,6 +93,11 @@ tourSchema.post(/^find/, function (docs, next) {
   next();
 });
 
+tourSchema.pre('aggregate', function (next) {
+  this.pipeline().unshift({ $match: { secretTour: { $ne: true } } });
+  next();
+});
+
 //we use uppercase for model names
 const Tour = mongoose.model('Tour', tourSchema);
 
