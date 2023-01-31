@@ -9,7 +9,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server.js",
-    "start:prod": "NODE_ENV=production nodemon server.js"
+    "start:prod": "NODE_ENV=production nodemon server.js",
+    "debug": "ndb server.js"
   },
   "author": "Huseyin Can Ercan",
   "license": "ISC",
@@ -31,6 +32,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.32.0",
     "markdown-notes-tree": "^1.12.0",
+    "ndb": "^1.1.5",
     "nodemon": "^2.0.20",
     "prettier": "^2.8.3"
   }
