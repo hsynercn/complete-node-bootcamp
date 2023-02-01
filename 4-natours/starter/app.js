@@ -13,13 +13,6 @@ if (process.env.NODE_ENV === 'development') {
 app.use(express.json());
 app.use(express.static(`${__dirname}/public`));
 
-//we can create our own middleware functions
-app.use((req, res, next) => {
-  console.log('Hello from the middleware');
-  //we need to call next function to move to the next middleware, otherwise the request will be stuck here
-  next();
-});
-
 app.use((req, res, next) => {
   req.requestTime = new Date().toISOString();
   next();
@@ -28,5 +21,13 @@ app.use((req, res, next) => {
 //routers
 app.use('/api/v1/tours', tourRouter);
 app.use('/api/v1/users', userRouter);
+
+//if we are here, it means that the route is not defined
+app.all('*', (req, res, next) => {
+  res.status(404).json({
+    status: 'fail',
+    message: `Can't find ${req.originalUrl} on this server!`,
+  });
+});
 
 module.exports = app;
