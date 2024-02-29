@@ -2,7 +2,7 @@ repo_name: hsynercn/complete-node-bootcamp
 report_id: 9e1bf616d21c84c4010800dcc8a7d025
 version: 0.1
 repo_type: Public
-timestamp: '2024-01-31T10:53:48+00:00'
+timestamp: '2024-02-29T19:45:16+00:00'
 requested_by: hsynercn
 provider: github
 branch: master
@@ -121,7 +121,7 @@ tools:
   last_updated_by: Jonas Schmedtmann
   last_updated_on: 2019-06-13 14:43:15.000000000 Z
 - name: Prettier
-  description: 'Prettier is an opinionated code formatter. '
+  description: Prettier is an opinionated code formatter.
   website_url: https://prettier.io/
   version: 1.17.0
   license: MIT
