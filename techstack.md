@@ -3,17 +3,17 @@
 ## Tech Stack
 hsynercn/complete-node-bootcamp is built on the following main stack:
 
-- [Stripe](https://stripe.com) – Payment Services
-- [ExpressJS](http://expressjs.com/) – Microframeworks (Backend)
-- [Pug](https://pugjs.org) – Templating Languages & Extensions
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) – Languages
+- [Pug](https://pugjs.org) – Templating Languages & Extensions
+- [ExpressJS](http://expressjs.com/) – Microframeworks (Backend)
 - [Mongoose](http://mongoosejs.com/) – Object Document Mapper (ODM)
-- [Nodemailer](http://www.nodemailer.com/) – Transactional Email
 - [ESLint](http://eslint.org/) – Code Review
-- [axios](https://github.com/mzabriskie/axios) – Javascript Utilities & Libraries
-- [nodemon](http://nodemon.io/) – node.js Application Monitoring
-- [Prettier](https://prettier.io/) – Code Review
 - [Parcel](https://parceljs.org/) – JS Build Tools / JS Task Runners
+- [Prettier](https://prettier.io/) – Code Review
+- [nodemon](http://nodemon.io/) – node.js Application Monitoring
+- [Stripe](https://stripe.com) – Payment Services
+- [Nodemailer](http://www.nodemailer.com/) – Transactional Email
+- [axios](https://github.com/mzabriskie/axios) – Javascript Utilities & Libraries
 
 Full tech stack [here](/techstack.md)
 
@@ -23,17 +23,17 @@ Full tech stack [here](/techstack.md)
 ## Tech Stack
 hsynercn/complete-node-bootcamp is built on the following main stack:
 
-- <img width='25' height='25' src='https://img.stackshare.io/service/97/eW6tXeq3.png' alt='Stripe'/> [Stripe](https://stripe.com) – Payment Services
-- <img width='25' height='25' src='https://img.stackshare.io/service/1163/hashtag.png' alt='ExpressJS'/> [ExpressJS](http://expressjs.com/) – Microframeworks (Backend)
-- <img width='25' height='25' src='https://img.stackshare.io/service/1175/pug.png' alt='Pug'/> [Pug](https://pugjs.org) – Templating Languages & Extensions
 - <img width='25' height='25' src='https://img.stackshare.io/service/1209/javascript.jpeg' alt='JavaScript'/> [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) – Languages
+- <img width='25' height='25' src='https://img.stackshare.io/service/1175/pug.png' alt='Pug'/> [Pug](https://pugjs.org) – Templating Languages & Extensions
+- <img width='25' height='25' src='https://img.stackshare.io/service/1163/hashtag.png' alt='ExpressJS'/> [ExpressJS](http://expressjs.com/) – Microframeworks (Backend)
 - <img width='25' height='25' src='https://img.stackshare.io/service/1231/0TXzZU7W_400x400.jpg' alt='Mongoose'/> [Mongoose](http://mongoosejs.com/) – Object Document Mapper (ODM)
-- <img width='25' height='25' src='https://img.stackshare.io/service/2862/qr2-jCLr.jpg' alt='Nodemailer'/> [Nodemailer](http://www.nodemailer.com/) – Transactional Email
 - <img width='25' height='25' src='https://img.stackshare.io/service/3337/Q4L7Jncy.jpg' alt='ESLint'/> [ESLint](http://eslint.org/) – Code Review
-- <img width='25' height='25' src='https://img.stackshare.io/no-img-open-source.png' alt='axios'/> [axios](https://github.com/mzabriskie/axios) – Javascript Utilities & Libraries
-- <img width='25' height='25' src='https://img.stackshare.io/service/5577/preview.png' alt='nodemon'/> [nodemon](http://nodemon.io/) – node.js Application Monitoring
-- <img width='25' height='25' src='https://img.stackshare.io/service/7035/default_66f265943abed56bcdbfca1c866a4261b1fbb063.jpg' alt='Prettier'/> [Prettier](https://prettier.io/) – Code Review
 - <img width='25' height='25' src='https://img.stackshare.io/service/8054/fC6Wad-S_400x400.jpg' alt='Parcel'/> [Parcel](https://parceljs.org/) – JS Build Tools / JS Task Runners
+- <img width='25' height='25' src='https://img.stackshare.io/service/7035/default_66f265943abed56bcdbfca1c866a4261b1fbb063.jpg' alt='Prettier'/> [Prettier](https://prettier.io/) – Code Review
+- <img width='25' height='25' src='https://img.stackshare.io/service/5577/preview.png' alt='nodemon'/> [nodemon](http://nodemon.io/) – node.js Application Monitoring
+- <img width='25' height='25' src='https://img.stackshare.io/service/97/eW6tXeq3.png' alt='Stripe'/> [Stripe](https://stripe.com) – Payment Services
+- <img width='25' height='25' src='https://img.stackshare.io/service/2862/qr2-jCLr.jpg' alt='Nodemailer'/> [Nodemailer](http://www.nodemailer.com/) – Transactional Email
+- <img width='25' height='25' src='https://img.stackshare.io/no-img-open-source.png' alt='axios'/> [axios](https://github.com/mzabriskie/axios) – Javascript Utilities & Libraries
 
 Full tech stack [here](/techstack.md)
 
@@ -44,7 +44,7 @@ Full tech stack [here](/techstack.md)
 # Tech Stack File
 ![](https://img.stackshare.io/repo.svg "repo") [hsynercn/complete-node-bootcamp](https://github.com/hsynercn/complete-node-bootcamp)![](https://img.stackshare.io/public_badge.svg "public")
 <br/><br/>
-|40<br/>Tools used|01/31/24 <br/>Report generated|
+|40<br/>Tools used|02/29/24 <br/>Report generated|
 |------|------|
 </div>
 
